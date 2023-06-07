@@ -77,7 +77,7 @@ func main() {
 		r.Use(static.Serve("/", static.LocalFile("frontend", false)))
 	} else {
 		r.GET("/", func(c *gin.Context) {
-			c.String(200, "ShadowBG")
+			c.String(200, "ShadowBG - Please use port 8001")
 		})
 	}
 	

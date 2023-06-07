@@ -1,0 +1,9 @@
+FROM golang:1.20 as development
+
+WORKDIR /shadowbg_backend
+
+COPY /shadowbg-backend/ /shadowbg_backend/
+
+RUN go mod download
+
+RUN go mod tidy -e

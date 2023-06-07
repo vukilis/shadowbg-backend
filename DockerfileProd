@@ -1,0 +1,7 @@
+FROM golang:1.20 as development
+
+WORKDIR /shadowbg_backend
+
+COPY /shadowbg-backend/ /shadowbg_backend/
+
+RUN go build -o shadow.bg main.go
